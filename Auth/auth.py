@@ -23,7 +23,7 @@ def auth(client, auth_provider):
         print('Copy everything in the address bar after "code=", and paste it below.')
         print(auth_url)
         code = input('Paste code here: ')
-        path = 'C:\\Users\\Nazgul\\Desktop\\OneDrive-DiscordBot\\session.pickle'
+        path = '.\\session.pickle'
         if(not os.path.isfile(path)):
             print('No session pickle... Creating')
         client.auth_provider.authenticate(code, redirect_uri, client_secret)
